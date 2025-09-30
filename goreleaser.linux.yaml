@@ -738,8 +738,11 @@ blobs:
     endpoint: "{{ .Env.PKG_S3_SERVER_NAME }}"
     region: fra
     bucket: "{{ .Env.PKG_S3_BUCKET_NAME }}"
-    ids:
-      - builds-linux
     directory: "{{ .ProjectName }}/{{ .Version }}"
     disable: false
     acl: public-read
+    extra_files:
+     - glob: ./**.rpm
+     - glob: ./**.rpm.sbom.json
+     - glob: ./**.deb
+     - glob: ./**.deb.sbom.json
