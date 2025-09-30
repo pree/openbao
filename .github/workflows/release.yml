@@ -315,6 +315,10 @@ jobs:
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
           NFPM_DEFAULT_PASSPHRASE: ${{ secrets.GPG_PASSWORD }}
           NIGHTLY_RELEASE: ${{ inputs.nightly }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.PKG_S3_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.PKG_S3_SECRET }}
+          PKG_S3_SERVER_NAME: ${{ secrets.PKG_S3_SERVER_NAME }}
+          PKG_S3_BUCKET_NAME: ${{ secrets.PKG_S3_BUCKET_NAME }}
 
       - name: Remove GPG Signing Key File
         if: always()
