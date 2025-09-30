@@ -262,7 +262,7 @@ dockers:
 
 docker_manifests:
   - name_template: ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-hsm{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}
-    skip_push: false
+    skip_push: true
     image_templates:
       - ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-hsm{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-amd64
       - ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-hsm{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-arm64
@@ -282,7 +282,7 @@ docker_manifests:
       - ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-hsm{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-amd64
       - ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-hsm{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-arm64
   - name_template: ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-hsm-ubi{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}
-    skip_push: false
+    skip_push: true
     image_templates:
       - ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-hsm-ubi{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-amd64
       - ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-hsm-ubi{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-arm64
