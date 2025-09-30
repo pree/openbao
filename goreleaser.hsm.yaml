@@ -51,8 +51,7 @@ builds:
 report_sizes: true
 
 nfpms:
-  - id: nfpms
-    vendor: OpenBao
+  - vendor: OpenBao
     package_name: bao-hsm
     homepage: https://openbao.org
     maintainer: OpenBao <openbao@lists.openssf.org>
@@ -471,7 +470,7 @@ blobs:
     region: fra
     bucket: "{{ Env.PKG_S3_BUCKET_NAME }}"
     ids:
-      - nfpms
+      - builds-hsm
     directory: "{{ .ProjectName }}-hsm/{{ .Version }}"
     disable: false
     acl: public-read
