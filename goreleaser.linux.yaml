@@ -110,7 +110,7 @@ dockers:
     use: buildx
     goos: linux
     goarch: amd64
-    skip_push: false
+    skip_push: true
     ids:
       - builds-linux
     build_flag_templates:
@@ -146,7 +146,7 @@ dockers:
     goos: linux
     goarch: arm
     goarm: "6"
-    skip_push: false
+    skip_push: true
     ids:
       - builds-linux
     build_flag_templates:
@@ -182,7 +182,7 @@ dockers:
     goos: linux
     goarch: arm64
     goarm: "8"
-    skip_push: false
+    skip_push: true
     ids:
       - builds-linux
     build_flag_templates:
@@ -217,7 +217,7 @@ dockers:
     use: buildx
     goos: linux
     goarch: ppc64le
-    skip_push: false
+    skip_push: true
     ids:
       - builds-linux
     build_flag_templates:
@@ -252,7 +252,7 @@ dockers:
     use: buildx
     goos: linux
     goarch: riscv64
-    skip_push: false
+    skip_push: true
     ids:
       - builds-linux
     build_flag_templates:
@@ -287,7 +287,7 @@ dockers:
     use: buildx
     goos: linux
     goarch: s390x
-    skip_push: false
+    skip_push: true
     ids:
       - builds-linux
     build_flag_templates:
@@ -322,7 +322,7 @@ dockers:
     use: buildx
     goos: linux
     goarch: amd64
-    skip_push: false
+    skip_push: true
     ids:
       - builds-linux
     build_flag_templates:
@@ -358,7 +358,7 @@ dockers:
     goos: linux
     goarch: arm64
     goarm: "8"
-    skip_push: false
+    skip_push: true
     ids:
       - builds-linux
     build_flag_templates:
@@ -393,7 +393,7 @@ dockers:
     use: buildx
     goos: linux
     goarch: ppc64le
-    skip_push: false
+    skip_push: true
     ids:
       - builds-linux
     build_flag_templates:
@@ -428,7 +428,7 @@ dockers:
     use: buildx
     goos: linux
     goarch: s390x
-    skip_push: false
+    skip_push: true
     ids:
       - builds-linux
     build_flag_templates:
@@ -526,7 +526,7 @@ docker_manifests:
       - ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-ubi{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-ppc64le
       - ghcr.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-ubi{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-s390x
   - name_template: docker.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}
-    skip_push: false
+    skip_push: true
     image_templates:
       - docker.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-amd64
       - docker.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-arm
@@ -562,7 +562,7 @@ docker_manifests:
       - docker.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-riscv64
       - docker.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-s390x
   - name_template: docker.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-ubi{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}
-    skip_push: false
+    skip_push: true
     image_templates:
       - docker.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-ubi{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-amd64
       - docker.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-ubi{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-arm64
@@ -590,7 +590,7 @@ docker_manifests:
       - docker.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-ubi{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-ppc64le
       - docker.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-ubi{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-s390x
   - name_template: quay.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}
-    skip_push: false
+    skip_push: true
     image_templates:
       - quay.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-amd64
       - quay.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-arm
@@ -626,7 +626,7 @@ docker_manifests:
       - quay.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-riscv64
       - quay.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-s390x
   - name_template: quay.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-ubi{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}
-    skip_push: false
+    skip_push: true
     image_templates:
       - quay.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-ubi{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-amd64
       - quay.io/{{ .Env.GITHUB_REPOSITORY_OWNER }}/openbao-ubi{{ .Env.NIGHTLY_RELEASE }}:{{ .Version }}-arm64
