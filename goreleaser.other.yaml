@@ -139,7 +139,7 @@ signs:
 
 release:
   github:
-    owner: openbao
+    owner: pree
     name: openbao{{ .Env.NIGHTLY_RELEASE }}
 
   prerelease: auto
