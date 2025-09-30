@@ -466,12 +466,12 @@ release:
   replace_existing_artifacts: false
 
 blobs:
-  provider: s3
-  endpoint: "{{ Env.PKG_S3_SERVER_NAME }}"
-  region: fra
-  bucket: "{{ Env.PKG_S3_BUCKET_NAME }}"
-  ids:
-    - nfpms
-  directory: "{{ .ProjectName }}-hsm/{{ .Version }}"
-  disable: false
-  acl: public-read
+  - provider: s3
+    endpoint: "{{ Env.PKG_S3_SERVER_NAME }}"
+    region: fra
+    bucket: "{{ Env.PKG_S3_BUCKET_NAME }}"
+    ids:
+      - nfpms
+    directory: "{{ .ProjectName }}-hsm/{{ .Version }}"
+    disable: false
+    acl: public-read
