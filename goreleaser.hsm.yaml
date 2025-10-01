@@ -472,8 +472,10 @@ blobs:
     directory: "{{ .ProjectName }}-hsm/{{ .Version }}"
     disable: false
     acl: public-read
-    extra_files:
-     - glob: ./**.rpm
-     - glob: ./**.rpm.sbom.json
-     - glob: ./**.deb
-     - glob: ./**.deb.sbom.json
+    ids:
+      - default
+#    extra_files:
+#     - glob: ./**.rpm
+#     - glob: ./**.rpm.sbom.json
+#     - glob: ./**.deb
+#     - glob: ./**.deb.sbom.json
