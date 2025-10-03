@@ -52,7 +52,7 @@ jobs:
           fi
 
   build-ui-dist:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs:
       - setup
     outputs:
@@ -170,7 +170,7 @@ jobs:
           retention-days: 1
 
   release-main:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs:
       - build-ui-dist
     env:
